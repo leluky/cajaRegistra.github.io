@@ -5,43 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caja Registradora</title>
     <style>
-        /* Estilo general para el cuerpo */
+        /* CSS embebido */
         body {
-            font-family: sans-serif,Arial ;
-            background-color: #7EADBF ; /* Fondo color */
-            color: black; /* Color de las letras */
-            display: flex; /* Para centrar contenido */
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            height: 100vh; /* Altura completa de la ventana */
+            font-family: Arial, sans-serif;
+            background-color: #A0C9D9;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
         }
-
-        /* Contenedor principal */
         .container {
-            text-align: center; /* Centrar texto */
-            background-color: #beedff; /* Fondo del contenedor */
+            text-align: center;
+            background-color: #b6e9fd;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto flotante */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         .producto {
             margin: 10px 0;
         }
-
         button {
             padding: 5px 10px;
             margin-top: 10px;
             cursor: pointer;
         }
-
-        /* Estilo del resumen de ventas */
         #resumen {
             list-style-type: none;
             padding: 0;
         }
-
         #resumen li {
             margin: 5px 0;
         }
@@ -49,39 +42,41 @@
 </head>
 <body>
 
-    <!-- Contenedor centralizado -->
     <div class="container">
         <h2>Caja Registradora</h2>
 
+        <!-- Productos disponibles -->
         <div id="productos">
             <div class="producto">
                 <span> Agua - $250.00</span>
-                <button onclick="agregarProducto('Producto A', 250)">Agregar</button>
+                <button onclick="agregarProducto('Agua', 250)">Agregar</button>
             </div>
             <div class="producto">
                 <span> Ice Crema - $500.00</span>
-                <button onclick="agregarProducto('Producto B', 500)">Agregar</button>
+                <button onclick="agregarProducto('Ice Crema', 500)">Agregar</button>
             </div>
             <div class="producto">
                 <span> Ice Bombom - $800.00</span>
-                <button onclick="agregarProducto('Producto C', 800)">Agregar</button>
+                <button onclick="agregarProducto('Ice Bombom', 800)">Agregar</button>
             </div>
             <div class="producto">
                 <span> Twister - $500.00</span>
-                <button onclick="agregarProducto('Producto B', 500)">Agregar</button>
+                <button onclick="agregarProducto('Twister', 500)">Agregar</button>
             </div>
             <div class="producto">
                 <span> Pico Rico - $500.00</span>
-                <button onclick="agregarProducto('Producto C', 500)">Agregar</button>
+                <button onclick="agregarProducto('Pico Rico', 500)">Agregar</button>
             </div>
         </div>
 
+        <!-- Resumen de las ventas -->
         <h2>Resumen de Ventas</h2>
         <ul id="resumen"></ul>
         <p>Total: $<span id="total">0.00</span></p>
         <button onclick="finalizarDia()">Finalizar Día</button>
     </div>
 
-    <script src="index.js"></script>
+    <!-- Cargar archivo JavaScript -->
+    <script src="caja_registradora.js"></script>
 </body>
 </html>
